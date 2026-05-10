@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SB Store | Premium Combat Gear Hub 🥊
 
-## Getting Started
+SB Store is a high-performance, editorial e-commerce platform designed for professional combat sports enthusiasts. Built with a minimalist "Lean Performance" philosophy, it merges cutting-edge full-stack technology with a premium Apple-inspired user experience.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 15 & TypeScript:** Built on the latest App Router architecture for lightning-fast performance and full type safety.
+- **Dynamic UX/UI:** Fluid, high-end animations powered by **Framer Motion**, including horizontal scroll storytelling on the About page.
+- **Advanced Authentication:** Features a secure email verification flow and a secondary "Access Password" (2FA-style) layer for the administrative dashboard.
+- **Full-Scale Admin Hub:** A dedicated secure portal for real-time inventory management with full CRUD capabilities.
+- **State Management:** Sophisticated client-side state handling using **Zustand** with persistence middleware.
+- **Responsive & Minimalist:** A custom-engineered design system focused on typography and white space, optimized for all devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js 15, React 19, Tailwind CSS, Framer Motion
+- **State:** Zustand (Auth & Cart Persistence)
+- **Security:** Email OTP Verification, Admin Access Vault
+- **API:** Next.js Route Handlers (Server-side CRUD)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Security Notice
 
-## Learn More
+This repository uses a dual-layer security model. While the public-facing store is open to all, the **Inventory Hub** is protected by both standard authentication and a secondary hardware/password-based access key. Sensitive data and private inventory files are excluded from this repository via `.gitignore`.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Dpehect/SB-Store.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Environment Setup:**
+   Create a `.env.local` file based on `.env.example` (if applicable) and configure your secrets.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run development server:**
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*This project was developed with precision to demonstrate high-end web engineering standards. 2026*

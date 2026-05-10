@@ -1,0 +1,12 @@
+[
+  {
+    "id": "example-1",
+    "name": "Example Boxing Gloves",
+    "brand": "Example Brand",
+    "price": 99.99,
+    "category": "Boxing",
+    "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
+    "description": "Example description for the product.",
+    "isNew": true
+  }
+]
