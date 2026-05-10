@@ -120,7 +120,7 @@ export default function CheckoutPage() {
 
               <div className="pt-10 px-12">
                 <Button className="w-full h-20 bg-primary text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-none hover:bg-accent transition-all duration-700 shadow-2xl shadow-primary/20">
-                  {t.payNow} — ${total}
+                  {t.payNow} — {(total * 45).toLocaleString('tr-TR')} TL
                 </Button>
                 <div className="flex items-center justify-center space-x-3 mt-8 text-muted/60">
                   <Lock size={12} />
@@ -140,7 +140,7 @@ export default function CheckoutPage() {
             <h3 className="text-[11px] font-black uppercase tracking-[0.3em] border-b border-gray-100 pb-8">{t.summary}</h3>
             
             <div className="space-y-10 max-h-[50vh] overflow-y-auto pr-4 custom-scrollbar">
-              {items.map((item) => (
+              {cartItems.map((item) => (
                 <div key={item.id} className="flex justify-between items-start group">
                   <div className="flex space-x-6">
                     <div className="relative w-20 aspect-[3/4] bg-white overflow-hidden">
@@ -153,7 +153,7 @@ export default function CheckoutPage() {
                       </p>
                     </div>
                   </div>
-                  <span className="text-xs font-black py-1">${(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="text-xs font-black py-1">{(item.price * item.quantity * 45).toLocaleString('tr-TR')} TL</span>
                 </div>
               ))}
             </div>
@@ -161,12 +161,12 @@ export default function CheckoutPage() {
             <div className="pt-12 border-t border-gray-100 space-y-6">
                 <div className="flex justify-between text-sm font-bold uppercase tracking-widest">
                   <span>{t.subtotal}</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>{(subtotal * 45).toLocaleString('tr-TR')} TL</span>
                 </div>
                 {discountAmount > 0 && (
                   <div className="flex justify-between text-sm font-black uppercase tracking-widest text-accent">
                     <span>{discountLabel}</span>
-                    <span>-${discountAmount.toFixed(2)}</span>
+                    <span>-{(discountAmount * 45).toLocaleString('tr-TR')} TL</span>
                   </div>
                 )}
                 <div className="flex justify-between text-sm font-bold uppercase tracking-widest">
@@ -175,7 +175,7 @@ export default function CheckoutPage() {
                 </div>
               <div className="flex justify-between text-base font-black uppercase tracking-[0.3em] pt-10 border-t-2 border-primary">
                 <span>{t.total}</span>
-                <span className="text-2xl">${total.toFixed(2)}</span>
+                <span className="text-2xl">{(total * 45).toLocaleString('tr-TR')} TL</span>
               </div>
             </div>
 

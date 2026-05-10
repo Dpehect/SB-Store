@@ -10,7 +10,8 @@ import { motion } from "framer-motion";
 export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const { login, isAdmin } = useAuth();
+  const { login, user } = useAuth();
+  const isAdmin = user?.role === 'admin';
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -23,7 +24,7 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const success = login(password);
+    const success = login("gurlekyunusemre2@gmail.com", password);
     if (success) {
       router.push("/admin");
     } else {

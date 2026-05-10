@@ -3,9 +3,11 @@ import productsData from "./products.json";
 export interface Product {
   id: string;
   name: string;
-  category: 'Boxing' | 'MMA' | 'Muay Thai';
+  brand: string;
+  category: 'Boxing' | 'MMA';
   price: number;
   description: string;
+  image?: string;
   images: string[];
   colors: { name: string; hex: string }[];
   sizes: string[];
@@ -13,4 +15,4 @@ export interface Product {
   isNew?: boolean;
 }
 
-export const products = productsData as Product[];
+export const products = productsData as unknown as Product[];
