@@ -1,7 +1,7 @@
 [
   {
     "name": "Venum Coco Monogram",
-    "price": 249.99,
+    "price": 162.49,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/a9468881aa3fe5e142b37440daf4cb7535f29404_BG_MONOGRAM_PROBOXING_BURGUNDY_11__1_602x.jpg?v=1776330490",
     "description": "",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Venum Giant 2.0 Khamzat Chimaev",
-    "price": 149.99,
+    "price": 97.49,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/c2a888be4a55373fe2bdcb143e8d2875e63b7927_VENUM_06031_405_G_01_602x.jpg?v=1776331375",
     "description": "",
@@ -20,7 +20,7 @@
   },
   {
     "name": " Venum Giant 2.0 Mike Tyson Pro Boxing Gloves ",
-    "price": 149.99,
+    "price": 97.49,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/852624cfae883cad3dacefd36017cad179b07196_VENUM_05984_108_G_01_550x.jpg?v=1776330631",
     "description": "",
@@ -29,7 +29,7 @@
   },
   {
     "name": "Venum Hammer",
-    "price": 149.99,
+    "price": 97.49,
     "category": "Boxing",
     "image": "https://eu.venum.com/cdn/shop/files/e106005b9e784b44a54bd52f0a9775e7266e1524_VENUM_03808_126_G_2.jpg?v=1776330463&width=1946",
     "description": "",
@@ -38,7 +38,7 @@
   },
   {
     "name": "Venum Shield",
-    "price": 149.99,
+    "price": 97.49,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/1685aec15e17652402912ba2202445d04a07deef_VENUM_03805_100_G_2_550x.jpg?v=1776331013",
     "description": "",
@@ -47,7 +47,7 @@
   },
   {
     "name": "Venum Power 2.0",
-    "price": 59.99,
+    "price": 38.99,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/c8a4c614d83e0f2ba65752b4e64f20c0f7e42259_VENUM_04929_126_11_550x.jpg?v=1776330507",
     "description": "",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Venum x Top Rank Original",
-    "price": 99,
+    "price": 64.35,
     "category": "Boxing",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/7612d6f2f47749472ed3b7838cbcd112e3c4d425_VENUM_05409_004_G_01_550x.jpg?v=1776330181",
     "description": "",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Midnight_Fury",
-    "price": 49.99,
+    "price": 32.49,
     "category": "MMA",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/7acbbb588d09ea13c198a0a3981b0c71e86e70eb_VENUM_06163_690_G_3_602x.jpg?v=1777992695",
     "description": "",
@@ -74,7 +74,7 @@
   },
   {
     "name": "Venum Challenger",
-    "price": 34.99,
+    "price": 22.74,
     "category": "MMA",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/99c00d911d0933a23bdb82b716eb4083c7adc537_EU_VENUM_0666___VNM___1_602x.jpg?v=1776331242",
     "description": "",
@@ -83,7 +83,7 @@
   },
   {
     "name": "Venum x Ares",
-    "price": 39.99,
+    "price": 25.99,
     "category": "MMA",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/bb86d1d21082f226b72f505b0857d5665d95836f_VENUM_04754_001_1_602x.jpg?v=1758708886",
     "description": "",
@@ -92,7 +92,7 @@
   },
   {
     "name": "Ringhorns Charger by Venum",
-    "price": 24.99,
+    "price": 16.24,
     "category": "MMA",
     "image": "https://cdn.shopify.com/s/files/1/0578/3398/0097/files/c583e5ccbf3fc7a8f393b8bd4c4140b3f56cacff_RH_00007_114_1_602x.jpg?v=1770285198",
     "description": "",
@@ -101,7 +101,7 @@
   },
   {
     "name": "MX OG Fight Gloves",
-    "price": 249.99,
+    "price": 162.49,
     "category": "Boxing",
     "image": "https://www.everlast.com/cdn/shop/files/MX_OG_Fight_Gloves.jpg?v=1756235655&width=990",
     "description": "",
@@ -111,7 +111,7 @@
   },
   {
     "name": "1910 Pro Leather Laced Training Boxing Gloves",
-    "price": 199.99,
+    "price": 129.99,
     "category": "Boxing",
     "image": "https://www.everlast.com/cdn/shop/files/66-P00003589_BLK_01.jpg?v=1772542210&width=990",
     "description": "",
@@ -122,7 +122,7 @@
   {
     "name": "MX Elite Pro Fight Gloves",
     "brand": "Everlast",
-    "price": 249.99,
+    "price": 162.49,
     "category": "Boxing",
     "image": "https://www.everlast.com/cdn/shop/files/17-P00004044_WHITE_01.jpg?v=1766224072&width=990",
     "description": "",
@@ -132,7 +132,7 @@
   {
     "name": "Powerlock OG Pro Bag Gloves",
     "brand": "Everlast",
-    "price": 99.99,
+    "price": 64.99,
     "category": "Boxing",
     "image": "https://www.everlast.com/cdn/shop/files/P00004019_BLK_01.png?v=1756464074&width=990",
     "description": "",
@@ -142,7 +142,7 @@
   {
     "name": "Amateur Competition Boxing Gloves",
     "brand": "Everlast",
-    "price": 59.99,
+    "price": 38.99,
     "category": "Boxing",
     "image": "https://www.everlast.com/cdn/shop/files/P00003024_Red_Back2-0803.jpg?v=1773170424&width=990",
     "description": "",
@@ -152,7 +152,7 @@
   {
     "name": "Titan Muay Thai Glove",
     "brand": "Everlast",
-    "price": 79.99,
+    "price": 51.99,
     "category": "MMA",
     "image": "https://www.everlast.com/cdn/shop/files/P00003534.jpg?v=1746028019&width=533",
     "description": "",
@@ -162,7 +162,7 @@
   {
     "name": "Titan Pro MMA Glove",
     "brand": "Everlast",
-    "price": 49.99,
+    "price": 32.49,
     "category": "MMA",
     "image": "https://www.everlast.com/cdn/shop/files/Screenshot2025-01-31170112_ea051e49-1998-4ff4-b1a8-5eef2c32f0eb.png?v=1746047907&width=990",
     "description": "",
@@ -172,7 +172,7 @@
   {
     "name": "Core Everstrike MMA Gloves",
     "brand": "Everlast",
-    "price": 39.99,
+    "price": 25.99,
     "category": "MMA",
     "image": "https://www.everlast.com/cdn/shop/files/Black_173446bb-05db-411d-bd85-8287775966c8.jpg?v=1748016706&width=990",
     "description": "",
@@ -182,7 +182,7 @@
   {
     "name": "Fairtex x AAPE Limited Edition Boxing Gloves",
     "brand": "Fairtex",
-    "price": 159.99,
+    "price": 103.99,
     "category": "Boxing",
     "image": "https://www.fairtex.com/cdn/shop/files/BGV-PremiumFairtexxAAPE02.png?v=1743503887&width=770",
     "description": "",
@@ -192,7 +192,7 @@
   {
     "name": "YAMANTAKA Premium Boxing Gloves – Limited Edition",
     "brand": "Fairtex",
-    "price": 129.99,
+    "price": 84.49,
     "category": "Boxing",
     "image": "https://www.fairtex.com/cdn/shop/files/bgv-premium-yamantaka-website-_2.jpg?v=1715226705&width=770",
     "description": "",
@@ -202,7 +202,7 @@
   {
     "name": "Fairtex X Tom Atencio Boxing Gloves \"The Heart Of Warrior\"",
     "brand": "Fairtex",
-    "price": 129.99,
+    "price": 84.49,
     "category": "Boxing",
     "image": "https://www.fairtex.com/cdn/shop/files/bgv-premium--x-tom-atencio-02_1_2_x1024_641b99c1-b620-4bba-9308-3c2d51892b0a.jpg?v=1715226098&width=1280",
     "description": "",
@@ -212,7 +212,7 @@
   {
     "name": "https://www.fairtex.com/cdn/shop/files/BGV-EuropeBlack02.png?v=1773198413&width=770",
     "brand": "Fairtex",
-    "price": 99.99,
+    "price": 64.99,
     "category": "Boxing",
     "image": "https://www.fairtex.com/cdn/shop/files/BGV-EuropeBlack02.png?v=1773198413&width=1280",
     "description": "",
@@ -222,7 +222,7 @@
   {
     "name": "Coach BGV13 Sparring Gloves",
     "brand": "Fairtex",
-    "price": 99.99,
+    "price": 64.99,
     "category": "Boxing",
     "image": "https://www.fairtex.com/cdn/shop/files/bgv13_black_website_1__1_1_x1024_d937f131-8148-4088-8a18-a2c7c3614bb9.jpg?v=1756376613&width=1280",
     "description": "",
@@ -232,7 +232,7 @@
   {
     "name": "FGV18 Super Sparring Grappling Gloves",
     "brand": "Fairtex",
-    "price": 49.99,
+    "price": 32.49,
     "category": "MMA",
     "image": "https://www.fairtex.com/cdn/shop/files/fgv18_yellow_02_1_x1024_00e38a61-caa4-4caa-bfa1-096b93a945cc.jpg?v=1715226581&width=770",
     "description": "",
@@ -242,7 +242,7 @@
   {
     "name": "ONE X Fairtex FGV12 Grappling Gloves",
     "brand": "Fairtex",
-    "price": 39.99,
+    "price": 25.99,
     "category": "MMA",
     "image": "https://www.fairtex.com/cdn/shop/files/fairtex-fgv12-one--website-03.jpg?v=1715226576&width=770",
     "description": "",
