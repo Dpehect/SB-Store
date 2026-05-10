@@ -1,26 +1,31 @@
-# SB Store | Engineering-First E-Commerce
+# SB Store
 
-SB Store is a premium combat sports platform built to demonstrate high-end web architecture, security-first logic, and a refined user experience.
+A high-end e-commerce platform for professional combat sports gear. The project focuses on creating a seamless shopping experience using a minimalist editorial design and a solid technical foundation.
 
-## Technical Core
-- **Framework:** Next.js 15 (App Router), TypeScript, React 19.
-- **State Management:** Zustand with persistence for auth, cart, and session handling.
-- **Animations:** Framer Motion for premium, Apple-style horizontal scroll and fluid UI transitions.
-- **Styling:** Utility-first CSS architecture focused on minimalist editorial design.
+## Technical Stack
 
-## Security & Architecture
-- **Multi-Factor Auth:** Implemented a secure OTP Email Verification flow and a secondary "Access Vault" layer for administrative actions.
-- **Inventory Engine:** A robust CRUD API layer for real-time stock management and dynamic data filtering.
-- **Optimization:** Image optimization, SEO-friendly metadata, and performance-tuned route handlers.
+The application is built with Next.js 15 and TypeScript, using React 19 for the UI. The architecture is designed for performance and clean separation of concerns.
 
-## Highlights for Recruiters
-- **Scalability:** Architecture ready for transition from JSON-based storage to relational databases.
-- **Code Quality:** Strict type safety and clean, modular component structures.
-- **UX Vision:** Bridging the gap between industrial combat gear and high-end digital design.
+- **Frontend:** Next.js 15 (App Router), Tailwind CSS.
+- **State Management:** Zustand with persistent storage for auth and cart data.
+- **Animations:** Framer Motion for custom transitions and horizontal scroll behaviors.
+- **Security:** Multi-layer authentication including email OTP verification and a protected admin gateway.
+- **API Logic:** Server-side route handlers for inventory CRUD operations and dynamic metadata filtering.
 
-## Quick Start
-1. `npm install`
-2. Configure `.env.local`
-3. `npm run dev`
+## Features
 
-*Developed with a focus on precision, security, and performance. 2026*
+The store includes a fully functional shopping cart, secure checkout with member-specific discount logic, and a dedicated admin dashboard for real-time stock management.
+
+On the design side, I've prioritized typography and layout to create an Apple-style aesthetic. This includes a dynamic homepage that showcases various products and a specialized About page with fluid storytelling elements.
+
+## Development
+
+I developed this platform to address specific challenges in e-commerce, such as maintaining state persistence across sessions and ensuring secure administrative access without compromising UX.
+
+### Getting Started
+
+1. Install dependencies: `npm install`
+2. Set up environment variables for authentication.
+3. Start the dev server: `npm run dev`
+
+The code is modular and type-safe, making it ready for scaling or migrating to a relational database if needed.
