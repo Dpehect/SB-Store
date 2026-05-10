@@ -6,18 +6,25 @@ import { products } from "@/data/products";
 import { useLanguage } from "@/store/useLanguage";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
+  const [randomImage, setRandomImage] = useState("");
 
-  // Fix for SSR hydration issues with Zustand persist
   useEffect(() => {
     setMounted(true);
+    // Select a random product image on mount
+    if (products.length > 0) {
+      const randomIndex = Math.floor(Math.random() * products.length);
+      const selectedProduct = products[randomIndex];
+      setRandomImage(selectedProduct.image || (selectedProduct.images ? selectedProduct.images[0] : ""));
+    }
   }, []);
 
   if (!mounted) {
-    return <div className="min-h-screen bg-white" />; // Blank state until hydrated
+    return <div className="min-h-screen bg-white" />;
   }
 
   return (
@@ -64,8 +71,8 @@ export default function Home() {
               </p>
               <p>
                 {lang === "TR"
-                  ? "Aracıları ortadan kaldırarak ve doğrudan en iyi markalarla çalışarak, elit performansı herkes için ulaşılabilir kılıyoruz. Softbridge Solutions tarafından titizlikle tasarlanan altyapımızla güvenli alışverişin keyfini çıkarın."
-                  : "By eliminating middlemen and working directly with top brands, we make elite performance accessible to everyone. Enjoy secure shopping with our infrastructure meticulously designed by Softbridge Solutions."}
+                  ? "Aracıları ortadan kaldırarak ve doğrudan en iyi markalarla çalışarak, elit performansı herkes için ulaşılabilir kılıyoruz. Tasarlanan altyapımızla güvenli alışverişin keyfini çıkarın."
+                  : "By eliminating middlemen and working directly with top brands, we make elite performance accessible to everyone. Enjoy secure shopping with our robust infrastructure."}
               </p>
             </div>
             <div className="grid grid-cols-2 gap-8 pt-4">
@@ -80,17 +87,18 @@ export default function Home() {
             </div>
           </div>
           <div className="relative aspect-square bg-white shadow-2xl overflow-hidden group">
-             <Image 
-                src="https://cdn.shopify.com/s/files/1/0578/3398/0097/files/a9468881aa3fe5e142b37440daf4cb7535f29404_BG_MONOGRAM_PROBOXING_BURGUNDY_11__1_602x.jpg?v=1776330490" 
-                alt="Our Philosophy" 
-                fill 
-                className="object-cover p-8 group-hover:scale-105 transition-transform duration-700" 
-             />
+             {randomImage && (
+               <Image 
+                  key={randomImage}
+                  src={randomImage} 
+                  alt="Our Philosophy" 
+                  fill 
+                  className="object-cover p-8 group-hover:scale-105 transition-transform duration-1000" 
+               />
+             )}
           </div>
         </div>
       </section>
     </div>
   );
 }
-
-import Image from "next/image";
