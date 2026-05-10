@@ -66,7 +66,7 @@ export default function ReturnsPage() {
               <CheckCircle className="text-accent mt-1" size={18} />
               <div>
                 <p className="font-bold mb-1">Talep Oluşturma</p>
-                <p className="text-sm text-gray-300">Hesabım > Siparişlerim üzerinden iade talebinizi oluşturun.</p>
+                <p className="text-sm text-gray-300">Hesabım {">"} Siparişlerim üzerinden iade talebinizi oluşturun.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
