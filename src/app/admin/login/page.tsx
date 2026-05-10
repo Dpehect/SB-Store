@@ -1,4 +1,5 @@
 "use client";
+// Forced update for Vercel deployment verification
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
