@@ -7,12 +7,14 @@ import { ChevronDown, X, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/store/useLanguage";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 export default function ShopPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState("featured");
   const [isSortOpen, setIsSortOpen] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
@@ -82,41 +84,136 @@ export default function ShopPage() {
             <p className="text-sm text-muted max-w-md font-medium leading-relaxed">{t.desc}</p>
           </div>
           
-          <div className="relative">
+          <div className="flex items-center space-x-4">
             <button 
-              onClick={() => setIsSortOpen(!isSortOpen)}
-              className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-[0.2em] border-b-2 border-primary pb-2 group"
+              onClick={() => setIsFilterOpen(true)}
+              className="md:hidden flex items-center space-x-2 text-[11px] font-black uppercase tracking-widest border border-primary px-6 py-2"
             >
-              <span>{t.sortBy}: {sortOptions.find(o => o.id === sortBy)?.label}</span>
-              <ChevronDown size={14} className={cn("transition-transform duration-300", isSortOpen && "rotate-180")} />
+              <span>{lang === "TR" ? "FİLTRELE" : "FILTER"}</span>
+              {isFilterActive && <span className="w-2 h-2 bg-accent rounded-full" />}
             </button>
+            
+            <div className="relative">
+              <button 
+                onClick={() => setIsSortOpen(!isSortOpen)}
+                className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-[0.2em] border-b-2 border-primary pb-2 group"
+              >
+                <span>{t.sortBy}: {sortOptions.find(o => o.id === sortBy)?.label}</span>
+                <ChevronDown size={14} className={cn("transition-transform duration-300", isSortOpen && "rotate-180")} />
+              </button>
 
-            <AnimatePresence>
-              {isSortOpen && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute right-0 top-full mt-4 w-64 bg-white shadow-2xl z-30 py-4 border border-gray-50"
-                >
-                  {sortOptions.map((opt) => (
-                    <button
-                      key={opt.id}
-                      onClick={() => {
-                        setSortBy(opt.id);
-                        setIsSortOpen(false);
-                      }}
-                      className="w-full flex items-center justify-between px-6 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-surface transition-colors"
-                    >
-                      <span className={cn(sortBy === opt.id ? "text-primary" : "text-muted")}>{opt.label}</span>
-                      {sortBy === opt.id && <Check size={12} className="text-primary" />}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+              <AnimatePresence>
+                {isSortOpen && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 top-full mt-4 w-64 bg-white shadow-2xl z-30 py-4 border border-gray-50"
+                  >
+                    {sortOptions.map((opt) => (
+                      <button
+                        key={opt.id}
+                        onClick={() => {
+                          setSortBy(opt.id);
+                          setIsSortOpen(false);
+                        }}
+                        className="w-full flex items-center justify-between px-6 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-surface transition-colors"
+                      >
+                        <span className={cn(sortBy === opt.id ? "text-primary" : "text-muted")}>{opt.label}</span>
+                        {sortBy === opt.id && <Check size={12} className="text-primary" />}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
+
+        {/* Mobile Filter Overlay */}
+        <AnimatePresence>
+          {isFilterOpen && (
+            <>
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsFilterOpen(false)}
+                className="fixed inset-0 bg-black/40 z-[100] md:hidden"
+              />
+              <motion.div 
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                className="fixed inset-y-0 left-0 w-[80%] bg-white z-[101] md:hidden p-12 overflow-y-auto"
+              >
+                <div className="flex justify-between items-center mb-12">
+                  <h3 className="text-lg font-black uppercase tracking-widest">{lang === "TR" ? "FİLTRELER" : "FILTERS"}</h3>
+                  <button onClick={() => setIsFilterOpen(false)}><X size={24} /></button>
+                </div>
+
+                <div className="space-y-16">
+                  {/* Discipline */}
+                  <div>
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8">{t.discipline}</h4>
+                    <ul className="space-y-5 text-xs font-bold uppercase tracking-wider">
+                      <li 
+                        onClick={() => { setSelectedCategory(null); setIsFilterOpen(false); }}
+                        className={cn("cursor-pointer transition-colors flex items-center space-x-3", !selectedCategory ? "text-primary" : "text-muted hover:text-primary")}
+                      >
+                        <div className={cn("w-2 h-2 rounded-full", !selectedCategory ? "bg-primary" : "bg-transparent")} />
+                        <span>{t.allDisciplines}</span>
+                      </li>
+                      {['Boxing', 'MMA'].map(cat => (
+                        <li 
+                          key={cat} 
+                          onClick={() => { setSelectedCategory(cat); setIsFilterOpen(false); }}
+                          className={cn(
+                            "flex items-center space-x-3 cursor-pointer transition-colors",
+                            selectedCategory === cat ? "text-primary" : "text-muted hover:text-primary"
+                          )}
+                        >
+                          <div className={cn("w-2 h-2 rounded-full", selectedCategory === cat ? "bg-primary" : "bg-transparent")} />
+                          <span>{cat === 'Boxing' ? t.boxing : cat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Size */}
+                  <div>
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8">{t.size}</h4>
+                    <div className="grid grid-cols-3 gap-3">
+                      {['10oz', '12oz', '14oz', '16oz', 'S', 'M', 'L', 'XL'].map(size => (
+                        <button 
+                          key={size} 
+                          onClick={() => setSelectedSize(selectedSize === size ? null : size)}
+                          className={cn(
+                            "border-2 py-3 text-[10px] font-black transition-all",
+                            selectedSize === size 
+                              ? "bg-primary text-white border-primary" 
+                              : "bg-transparent border-gray-100 text-muted hover:border-primary hover:text-primary"
+                          )}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {isFilterActive && (
+                  <Button 
+                    onClick={() => { clearFilters(); setIsFilterOpen(false); }}
+                    className="w-full mt-12 bg-accent text-white uppercase font-black text-[10px] tracking-widest rounded-none h-14"
+                  >
+                    {t.clearAll}
+                  </Button>
+                )}
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
 
         <div className="flex flex-col md:flex-row gap-20">
           

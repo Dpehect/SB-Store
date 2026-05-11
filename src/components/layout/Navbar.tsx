@@ -90,7 +90,7 @@ export const Navbar = () => {
           {/* Brand Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <h1 className={cn(
-              "text-2xl font-black tracking-tighter uppercase italic transition-colors",
+              "text-xl md:text-2xl font-black tracking-tighter uppercase italic transition-colors",
               useDarkText ? "text-primary" : "text-gray-100"
             )}>
               SB<span className="text-accent not-italic ml-1">STORE</span>
@@ -98,41 +98,43 @@ export const Navbar = () => {
           </Link>
 
           {/* Icons */}
-          <div className="flex items-center space-x-6 md:space-x-8">
+          <div className="flex items-center space-x-2 md:space-x-8">
             {/* Auth Button */}
-            {user ? (
-              <div className="flex items-center space-x-6">
-                {user.role === 'admin' && (
-                  <Link 
-                    href="/admin" 
-                    className={cn(
-                      "text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border transition-all",
-                      useDarkText ? "border-primary text-primary hover:bg-primary hover:text-white" : "border-white text-white hover:bg-white hover:text-primary"
-                    )}
-                  >
-                    ADMİN PANELİ
-                  </Link>
-                )}
-                <button onClick={() => logout()} className={cn("transition-colors", useDarkText ? "text-primary" : "text-gray-100")}>
-                  <LogOut size={18} strokeWidth={1.5} />
-                </button>
-              </div>
-            ) : (
-              <Link href="/login" className={cn("transition-colors", useDarkText ? "text-primary" : "text-gray-100")}>
-                <User size={20} strokeWidth={1.5} />
-              </Link>
-            )}
+            <div className="hidden sm:flex items-center space-x-4">
+              {user ? (
+                <div className="flex items-center space-x-4">
+                  {user.role === 'admin' && (
+                    <Link 
+                      href="/admin" 
+                      className={cn(
+                        "text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1.5 border transition-all",
+                        useDarkText ? "border-primary text-primary hover:bg-primary hover:text-white" : "border-white text-white hover:bg-white hover:text-primary"
+                      )}
+                    >
+                      ADMİN
+                    </Link>
+                  )}
+                  <button onClick={() => logout()} className={cn("transition-colors", useDarkText ? "text-primary" : "text-gray-100")}>
+                    <LogOut size={18} strokeWidth={1.5} />
+                  </button>
+                </div>
+              ) : (
+                <Link href="/login" className={cn("transition-colors", useDarkText ? "text-primary" : "text-gray-100")}>
+                  <User size={18} strokeWidth={1.5} />
+                </Link>
+              )}
+            </div>
 
-            <button className={cn("hidden md:block hover:text-accent transition-colors p-2", useDarkText ? "text-primary" : "text-gray-100")}>
-              <Search size={20} strokeWidth={1.5} />
+            <button className={cn("hidden sm:block hover:text-accent transition-colors p-2", useDarkText ? "text-primary" : "text-gray-100")}>
+              <Search size={18} strokeWidth={1.5} />
             </button>
             <button 
               onClick={() => setIsCartOpen(true)}
               className={cn("relative hover:text-accent transition-colors p-2", useDarkText ? "text-primary" : "text-gray-100")}
             >
-              <ShoppingBag size={22} strokeWidth={1.5} />
+              <ShoppingBag size={20} strokeWidth={1.5} />
               {totalItems > 0 && (
-                <span className="absolute top-0 right-0 bg-accent text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-black">
+                <span className="absolute top-1 right-1 bg-accent text-white text-[7px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-black">
                   {totalItems}
                 </span>
               )}

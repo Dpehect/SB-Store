@@ -77,20 +77,20 @@ export default function AboutPage() {
           <motion.div style={{ x }} className="flex">
             {slides.map((slide, i) => (
               <div key={i} className="h-screen w-screen flex-shrink-0 flex items-center justify-center p-6 md:p-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
-                  <div className="space-y-6">
-                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic" style={{ color: slide.color }}>
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center max-w-7xl">
+                  <div className="space-y-4 md:space-y-6 text-center lg:text-left">
+                    <h2 className="text-3xl md:text-7xl font-black tracking-tighter uppercase italic" style={{ color: slide.color }}>
                       {slide.title}
                     </h2>
-                    <p className="text-lg md:text-xl font-medium text-muted leading-relaxed">
+                    <p className="text-sm md:text-xl font-medium text-muted leading-relaxed max-w-sm mx-auto lg:mx-0">
                       {lang === "TR" ? slide.desc : slide.descEn}
                     </p>
-                    <div className="flex items-center space-x-3 text-[11px] font-black uppercase tracking-widest text-primary">
+                    <div className="flex items-center justify-center lg:justify-start space-x-3 text-[10px] md:text-[11px] font-black uppercase tracking-widest text-primary">
                       <span>Explore More</span>
                       <ChevronRight size={14} className="text-accent" />
                     </div>
                   </div>
-                  <div className="relative aspect-square shadow-2xl overflow-hidden rounded-sm group">
+                  <div className="relative w-full aspect-square shadow-2xl overflow-hidden rounded-sm group max-w-xs lg:max-w-none mx-auto">
                     <Image src={slide.image} alt={slide.title} fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                     <div className="absolute inset-0 bg-black/5" />
                   </div>

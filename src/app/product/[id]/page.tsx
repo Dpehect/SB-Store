@@ -64,9 +64,9 @@ export default function ProductDetailPage() {
   const productFeatures = product.features || ["Premium Quality Leather", "Reinforced Stitching", "Multi-layer Padding"];
 
   return (
-    <div className="pt-32 pb-20 px-6 md:px-12 bg-white min-h-screen">
+    <div className="pt-24 md:pt-32 pb-20 px-4 md:px-12 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16">
           
           {/* Left: Images */}
           <div className="lg:col-span-7 space-y-4">

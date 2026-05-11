@@ -32,7 +32,7 @@ export const Hero = () => {
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/80">
             {lang === "TR" ? "PROFESYONEL DÖVÜŞ EKİPMANLARI" : "PROFESSIONAL GRADE GEAR"}
           </span>
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white">
+          <h1 className="text-4xl md:text-8xl font-bold tracking-tighter text-white">
             {lang === "TR" ? <>ZİRVEDEKİLER İÇİN <br /> TASARLANDI</> : <>FORGED FOR <br /> THE ELITE</>}
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-xl mx-auto font-medium leading-relaxed">
